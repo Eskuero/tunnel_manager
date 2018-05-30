@@ -8,8 +8,9 @@ vars = {}
 
 # Loop through every line to store the variables on a list
 for line in config:
-    line = line.split()
-    vars[line[0]] = line[1]
+    if line[0] != "#":
+        line = line.split()
+        vars[line[0]] = line[1]
 
 # Use the recovered values to build the tunnel circuit, the login credentials and the final command
 circuit = vars['REMOTE_PORT'] + ":" + vars['DESTINY_HOST'] + ":" + vars['DESTINY_PORT']
