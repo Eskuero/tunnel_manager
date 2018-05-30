@@ -1,0 +1,10 @@
+# Listening port on the remote server a.k.a the one Internet clients will be connecting to
+REMOTE_PORT 8080
+# Remote server from where we will tunneling the requests. It may be a FQDN or an IP address
+REMOTE_HOST 192.168.224.4
+# User for login on the remote server
+REMOTE_USER eskuero
+# Final port where the requests will be forwarded to after leaving the tunnel
+DESTINY_PORT 80
+# Final server where the requests will be forwarded to after leaving the tunnel. It may be a FQDN or an IP address
+DESTINY_HOST localhost
