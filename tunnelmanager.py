@@ -11,7 +11,11 @@ except IndexError:
     file = input("No configuration file was provided, please specify one: ")
 
 # Open the file containing the parameters
-config = open(file, "r")
+try:
+    config = open(file, "r")
+except FileNotFoundError:
+    print("The file " + file + " was not found.")
+    sys.exit(1)
 vars = {}
 
 # Loop through every line to store the variables on a list
