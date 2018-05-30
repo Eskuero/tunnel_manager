@@ -32,7 +32,7 @@ command = shutil.which("ssh") + " -NT -R " + circuit + " " + login
 
 # We make sure that the directory for systemd units already exists
 userdir = os.environ["HOME"] + "/.config/systemd/user/"
-os.makedirs(userdir + "default.target.wants", exist_ok=True)
+os.makedirs(userdir, exist_ok=True)
 # We compose a new .unit file for the ssh tunnel
 temp = open("unit.tmp", "w")
 temp.write("[Unit]\n")
