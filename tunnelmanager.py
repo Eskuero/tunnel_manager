@@ -44,4 +44,5 @@ temp.write("WantedBy=default.target\n")
 temp.close()
 # We install to the final directory and enable the unit on boot
 os.rename("unit.tmp", userdir + "forward_tunnel_" + vars['TUNNEL_NAME'] + ".service")
-os.system("systemctl --user enable forward_tunnel_" + vars['TUNNEL_NAME'] + ".service")
+if vars['LOAD_ONBOOT'] == 'yes':
+	os.system("systemctl --user enable forward_tunnel_" + vars['TUNNEL_NAME'] + ".service")
