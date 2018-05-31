@@ -2,13 +2,13 @@
 REMOTE_PORT 8080
 # Remote server from where we will tunneling the requests. It may be a FQDN or an IP address
 REMOTE_HOST 192.168.224.4
-# User for login on the remote server
+# User for login on the remote server. Defaults to the $USER executing the script
 REMOTE_USER eskuero
 # Final port where the requests will be forwarded to after leaving the tunnel
 DESTINY_PORT 80
-# Final server where the requests will be forwarded to after leaving the tunnel. It may be a FQDN or an IP address
+# Final server where the requests will be forwarded to after leaving the tunnel. It may be a FQDN or an IP address. Defaults to localhost
 DESTINY_HOST localhost
 # Name assigned to identify the tunnel. Must be a single and unique word
 TUNNEL_NAME nginx
-# Choose whether to enable the SystemD unit to be loaded on boot/user login or have manual activation
+# Choose whether to enable the SystemD unit to be loaded on boot/user login or have manual activation. Defaults to no
 LOAD_ONBOOT yes
